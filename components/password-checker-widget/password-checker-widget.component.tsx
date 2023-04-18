@@ -8,6 +8,13 @@ import { IPasswordCheckerWidget } from './password-checker-widget.types';
 export const HAS_LEAST_ONE_NUMBER = /(?=.*[0-9])/;
 export const HAS_LEAST_ONE_SPECIAL_CHARACTER = /(?=.*[!@#$%^&*])/;
 
+export const INPUT_VALIDATION_RULES = {
+  required: true,
+  maxLength: 254,
+  minLength: 6,
+};
+
+
 export const checkLength = (string: string) => string.length >= INPUT_VALIDATION_RULES.minLength;
 
 export const checkCharactersAndDigits = (string?: string) => {
